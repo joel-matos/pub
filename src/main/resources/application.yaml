@@ -1,0 +1,18 @@
+server:
+    port: 8080
+    servlet.contextPath: /v1/api
+
+spring:
+    jackson.serialization.write_dates_as_timestamps: false
+    datasource:
+        url: jdbc:postgresql://localhost:5432/pub
+        username: postgres
+        password: admin
+    jpa:
+        show-sql: true
+        hibernate.ddl-auto: none
+        properties.hibernate:
+            dialect: org.hibernate.dialect.PostgreSQLDialect
+            format_sql: true
+    profiles.active: verbose
+
